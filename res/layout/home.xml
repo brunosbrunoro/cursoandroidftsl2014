@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:id="@+id/relHome"
+        >
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/calculesuamedia"
+            android:id="@+id/txtCalculeSuaMedia"
+            android:layout_margin="5dp" android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"/>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lilNomeCarro"
+                    android:layout_below="@+id/txtCalculeSuaMedia" android:layout_centerHorizontal="true"
+                    android:layout_margin="5dp">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/nomecarro"
+                android:id="@+id/txtNomeCarro"
+                android:layout_below="@+id/txtNomeCarro" android:layout_alignParentLeft="true"
+                android:layout_marginRight="10dp"/>
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/edtNomeCarro"/>
+
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/lilValoresMedia"
+            android:layout_below="@+id/lilNomeCarro" android:layout_alignParentLeft="true" android:layout_margin="5dp"
+            >
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:ems="10"
+                android:id="@+id/edtKm" android:layout_margin="5dp" android:hint="Km rodados"/>
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:ems="10"
+                android:id="@+id/edtLitros" android:layout_margin="5dp" android:hint="Litros"/>
+    </LinearLayout>
+    <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rgbCombustivel"
+            android:orientation="horizontal" android:layout_below="@+id/lilValoresMedia"
+            android:layout_centerHorizontal="true" android:layout_gravity="center_horizontal"
+            android:layout_margin="5dp">
+        <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gasolina"
+                android:id="@+id/rbtGasolina"/>
+        <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alcool"
+                android:id="@+id/rbtAlcool"/>
+        <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content"
+                     android:text="Diesel" android:id="@+id/rbtDiesel"/>
+    </RadioGroup>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calcular Média"
+            android:id="@+id/butCalcularMedia"
+            android:layout_below="@+id/rgbCombustivel" android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal" android:layout_margin="5dp"/>
+    <ListView
+            android:layout_width="290dp"
+            android:layout_height="200dp"
+            android:id="@+id/lstMedias"
+            android:layout_marginBottom="50dp" android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" android:layout_gravity="center_horizontal"
+            android:layout_margin="5dp"/>
+</LinearLayout>
+
